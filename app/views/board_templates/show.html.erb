@@ -38,6 +38,10 @@
 
             <td>
               <%= a_listing.user.username %>
+
+              <% if a_listing.user_id == current_user.id %>
+                <a href="/delete_listing/<%= a_listing.id %>">Delete</a>
+              <% end %>
             </td>
 
             <td>
